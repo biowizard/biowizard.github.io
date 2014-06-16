@@ -1,0 +1,29 @@
+---
+layout: mdpage
+---
+
+# Example Jobs
+
+This page demonstrates some common Biowizard jobs, which should provide a pretty good start for people writing their own.
+
+## Mapping Reads with STAR
+
+```
+---
+job: star
+
+credentials:
+    biofiles314159:
+        s3_access_key: [MY_AWS_ACCESS_KEY]
+        s3_secret_key: [MY_AWS_SECRET_KEY]
+
+inputs:
+    genome: s3://biofiles314159/star-genome-indexes/tmelannister.tar.gz
+    fastq:
+        - file: s3://biofiles314159/test_100reads.fastq.gz
+
+outputs:
+    sorted_bam: s3://biofiles314159/sorted.bam
+    sorted_bam_index: s3://biofiles314159/sorted.bam.bai
+    logs: s3://biofiles314159/logs
+```

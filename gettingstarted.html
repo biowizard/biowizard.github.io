@@ -1,0 +1,21 @@
+---
+layout: mdpage
+---
+
+# Getting Started
+
+1. Launch an EC2 instance with a Biowizard AMI
+
+	Biowizard is distributed as part of an Amazon Machine Image (AMI). Users can start up an Amazon EC2 instance with Biowizard and all the tools it uses baked right in. The current version of Biowizard is bundled in AMI ```ami-1a3bc772```. Only alpha users have access to this AMI at this time.
+
+1. Upload a [job file](jobfiles.html) to your instance
+
+    ```
+    scp -i mykey job-file-on-local-disk.yml ubuntu@myinstance.amazonaws.com:biowizard job.yml
+    ```
+
+1. Log in and run your job
+
+    ```
+    ssh -i mykey ubuntu@myinstance.amazonaws.com "biowizard job.yml"
+    ```

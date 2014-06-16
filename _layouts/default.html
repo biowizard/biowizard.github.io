@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
+        <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
+        <meta name="description" content="{{site.description}}"/>
+        <meta name="author" content="{{site.author}}"/>
+        <link rel="author" href="humans.txt"/>
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="{{site.baseurl}}/">Biowizard</a></h1>
+            <hr />
+        </header>
+
+        <nav>
+            <!-- <h3>First Heading</h3> -->
+            <ul>
+                <li><a href="{{site.baseurl}}/">Home</a></li>
+                <li><a href="{{site.baseurl}}/gettingstarted.html">Getting Started</a></li>
+                <li><a href="{{site.baseurl}}/examples">Examples</a></li>
+                <li><a href="{{site.baseurl}}/contact.html">Contact Us</a></li>
+            </ul>
+
+            <h3>Documentation</h3>
+            <ul>
+                <li><a href="{{site.baseurl}}/jobfiles.html">Job Files</a></li>
+                <li><a href="{{site.baseurl}}/jobs/star.html">Job: STAR</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            {{ content }}
+
+        </main>
+
+        <footer>
+            <hr />
+            <p>&copy; <time>2014</time> Biowizard, LLC.</p>
+        </footer>
+
+    </body>
+
+</html>
