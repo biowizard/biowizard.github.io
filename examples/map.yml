@@ -1,0 +1,12 @@
+---
+job: star
+
+inputs:
+    genome: "http://biowizard-examples.s3.amazonaws.com/star-genome-indexes/tmelannister.tar.gz"
+    fastq:
+        - "http://biowizard-examples.s3.amazonaws.com/test_100reads.fastq.gz"
+
+outputs:
+    sorted_bam: file://results/sorted.bam
+    sorted_bam_index: file://results/sorted.bam.bai
+    logs: file://logs
